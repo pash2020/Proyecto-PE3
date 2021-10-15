@@ -1,0 +1,122 @@
+<!--Plantilla principal para todo el funcionamiento del proyecto-->
+
+{% extends "base.html" %}
+
+{% block title %}Proyecto Ejemplo{% endblock %}
+
+{% block principal %}Proyecto PE3{% endblock %}
+
+{% block content %}
+   
+<center><h2 style="color:white" class="titulo">Bienvenidos al Menú de control</h2></center>
+
+<body bgcolor=#3acbd9>
+
+<div>
+    <h2 style="background-color:silver">Iluminación de Ambientes</h2>
+    <ul>
+        
+        <li>
+            <h3>Exterior</h3>
+                <form action="/estado_LDR">
+                    <button id="btn7" class={{bt7c}}>{{bt7t}}</button>
+                </form>
+        </li>
+        <li>
+            <h3>Sala</h3>
+                <form action="/estado_LS">
+                    <button id="btn2" class={{bt2c}}>{{bt2t}}</button>
+                </form>
+        </li>
+        <li>
+            <h3>Cocina</h3>
+                <form action="/estado_LC">
+                    <button id="btn3" class={{bt3c}}>{{bt3t}}</button>
+                </form>
+        </li>
+        <li>
+            <h3>Dormitorio</h3>
+                <form action="/estado_LD">
+                    <button id="btn4" class={{bt4c}}>{{bt4t}}</button>
+                </form>
+        </li>
+        <li>
+            <h3>Ba&ntilde;o</h3>
+                <form action="/estado_LB">
+                    <button id="btn5" class={{bt5c}}>{{bt5t}}</button>
+                </form>
+        </li>
+        <li>
+            <h3>Jard&iacute;n</h3>
+                <form action="/estado_AC">
+                    <button id="btn1" class={{bt1c}}>{{bt1t}}</button>
+                </form>
+        </li>
+</ul>
+</div>
+
+<br>
+
+<div>
+    <h2 style="background-color:silver">Procesos automáticos</h2>
+    <ul>      
+          <li>
+                <h3>Temperatura</h3>
+                <form action="/estado_TEMPon">
+                    <button id="btn8_1" class="encendido">ACTIVAR</button>
+                </form>
+                <form action="/estado_TEMPoff">
+                    <button id="btn8_2" class="apagado">DESACTIVAR</button>
+                </form>
+          </li>
+          <li>
+                <h3>Iluminación</h3>
+                <form action="/estado_LDRon">
+                    <button id="btn7_1" class="encendido">ACTIVAR</button>
+                </form>
+                <form action="/estado_LDRoff">
+                    <button id="btn7_2" class="apagado">DESACTIVAR</button>
+                </form>
+            </li>
+            
+            <li>
+                <h3>Pantalla</h3>
+                <form action="/estado_LCDon">
+                    <button id="btn9_1" class="encendido">ACTIVAR</button>
+                </form>
+                <form action="/estado_LCDoff">
+                    <button id="btn9_2" class="apagado">DESACTIVAR</button>
+                </form>
+          </li>
+      </ul>
+</div>
+
+<br>
+
+<div>
+    <h2 style="background-color:silver">Procesos separados</h2>
+    <ul>
+        <li>
+            <h3>Entrada</h3>
+                <form action="/estado_SM">
+                    <button id="btn6" class={{bt6c}}>{{bt6t}}</button>
+                </form>
+        </li>
+    </ul>
+<br>
+    <ul>
+        <li>
+            <h3>Medición: {{btm}} cm</h3>
+                <form action="/medicion">
+                    <button id="btn10" class="encendido">MEDIR</button>
+                </form>
+        </li>
+    </ul>
+</div>
+
+<p>
+Fecha: {{f}}
+</p>
+</body>
+
+{% endblock %}

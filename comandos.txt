@@ -1,0 +1,36 @@
+------------------
+
+sudo apt-get update
+sudo apt-get upgrade
+
+-----------------
+
+sudo pip3 install virtualenv
+
+virtualenv env
+source env/bin/activate
+
+deactivate
+
+------------------
+
+pip install -U pip
+pip install RPi.GPIO
+pip install rpi_lcd
+
+------------------	
+
+pip install Django
+
+django-admin startproject
+python manage.py migrate
+python manage.py runserver
+
+------------------
+
+ngrok help
+ngrok authtoken
+ngrok http
+
+
+

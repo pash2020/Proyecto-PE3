@@ -1,0 +1,66 @@
+<!--Base para todas las páginas html en este proyecto-->
+
+<!DOCTYPE HTML>
+
+{% block style %}
+<style>
+
+    .titulo {
+        background-color: Gray;
+    }
+
+    div {
+        margin-top: 5px; 
+        margin-bottom: 15px;
+        position: relative;
+        !important
+    }
+    
+    ul {
+        text-align: center;
+        font-weight: bold;
+        list-style-type: none;
+        margin: 0px;
+        overflow: hidden;
+        padding: 20px 20px 20px 100px;
+        background-color:DodgerBlue;
+        border-radius: 15%;
+        border-top: black 2px solid;
+        border-bottom: black 2px solid;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    
+    li {
+        float: left;
+        text-align: center;
+        padding: 15px 15px;
+
+    }
+    
+    .encendido {
+        background-color: #64e760;
+    }
+    .apagado {
+        background-color:rgb(206, 87, 87);
+    }
+</style>
+{% endblock %}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <h1>{% block principal %}{% endblock %}</h1>
+    {% block content %}{% endblock %}
+    
+     <!-- Agregando JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {% block script %}{% endblock %}
+    
+</body>
+</html>
